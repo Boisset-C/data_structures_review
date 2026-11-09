@@ -1,6 +1,6 @@
 # DATA STRUCTURES AND ALGORITHM PATTERNS
 
-# 1. Foundations
+# 1. INTRODUCTION: FOUNDATIONS
 
 # ARRAYS: default data structure for most things if its linear and ordered it is probably stored as an array
 #  - numbers
@@ -104,14 +104,26 @@ while start < end:
 # Worse Case (top) --> Best Case (Bottom)
 # O(n!): Factorial time
 # O(2^n): Exponential time
+
 # O(n^2): Quadriatic time
+# almost always assosciate with nested loops (usually to slow)
+
+# O(n log n): almost always related to sorting
+
 # O(n): linear time
+# Going through each item once (loops and traversing lists)
+
 # O(log n): logarithmic time
+# divid the problem in half each time (binary search)
+
 # O(1): constant time <-- Best Case
+# Example: Checking index in an array or checking if x exists in a set
 
 
+# TIPS
+# - for inputs 10^4 you probably need O(n^2) minimum
+# - for inputs 10^5 you probably need O(n log n) or better 
 
+#-------------------------------------------------------------------------------------------------------
 
-
-
-
+# 2. DATA STRUCTURES
