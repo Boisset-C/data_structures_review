@@ -53,4 +53,58 @@
 # - two pointers wins when input is already sorted or O(1) space is required
 
 
+# PROBLEMS WHERE TWO POINTERS COME UP (scanning two pairs?)
+# - Palindromes
+# - Reversals 
+# - Merging sorted data
+# - "K" sized comparisons
 
+
+def is_palindrome(s: str):
+  l, r = 0, len(s) - 1
+
+  while l < r:
+    while l < r and not s[l].isalnum():
+      l += 1
+    while l < r and not s[r].isalnum():
+      r -= 1
+    if s[l].lower() != s[r].lower():
+      return False
+    l += 1
+    r -= 1
+  return True
+
+
+number = 121
+
+
+
+# if with digits we can very fast solve a palindrome using
+# when way I can still optimize is check even/odd and see if at the middle I can check for 
+# palindrome
+def is_num_palindrome(x):
+  current = x
+  remainder = 0
+  potential_palindrome = 0
+
+  while current > 0:
+    remainder = current % 10
+    current = current // 10
+
+    potential_palindrome = (potential_palindrome * 10) + remainder
+
+  return potential_palindrome == x
+
+
+  # middle of a linked list
+  def find_middle(list):
+    slow = fast = end
+
+    while fast and fast.next:
+      fast = fast.next.next
+      slow = slow.next
+
+    return slow.next
+  
+
+  
